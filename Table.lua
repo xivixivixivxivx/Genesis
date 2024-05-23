@@ -34,7 +34,7 @@ getgenv().Genesis = {
             ["FovThickness"] = 1,
             ["FovColor"] = Color3.fromRGB(255,255,255),
             ["Target"] = {
-                ["Enabled"] = true
+                ["Enabled"] = true,
                 ["FovColor"] = Color3.fromRGB(255,0,0)
             }
         }
