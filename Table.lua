@@ -1,10 +1,10 @@
-getgenv.Genesis = {
+getgenv().Genesis = {
     ["Redirection"] = {
         ["Enabled"] = true,
 
         ["Configuration"] = {
             ["UseHotkey"] = true,
-            ["Hotkey"] = "J",
+            ["Hotkey"] = Enum.KeyCode.J, -- https://create.roblox.com/docs/reference/engine/enums/KeyCode
             ["AntiGroundShots"] = false,
             ["Unit"] = {
                 ["Part"] = "Head",
@@ -27,19 +27,23 @@ getgenv.Genesis = {
         },
         ["Visuals"] = {
             ["Visible"] = true,
-            ["Mode"] = "Outline",
+            ["Mode"] = "Outline", -- Default, Outline, Dot
             ["Radius"] = 30,
-            ["FovFilled"] = 1,
+            ["FovFilled"] = false,
             ["FovTransparency"] = 1,
             ["FovThickness"] = 1,
-            ["FovColor"] = Color3.fromRGB(255,255,255)
+            ["FovColor"] = Color3.fromRGB(255,255,255),
+            ["Target"] = {
+                ["Enabled"] = true
+                ["FovColor"] = Color3.fromRGB(255,0,0)
+            }
         }
     },
     ["Aligner"] = {
         ["Enabled"] = true,
 
         ["Configuration"] = {
-            ["Hotkey"] = "c",
+            ["Hotkey"] = Enum.KeyCode.C, -- https://create.roblox.com/docs/reference/engine/enums/KeyCode
             ["UseFov"] = true,
             ["UseShake"] = false,
             ["ShakeAmount"] = 0,
@@ -58,7 +62,7 @@ getgenv.Genesis = {
             
             ["Methoding"] = {
                 ["SmoothingStyle"] = Enum.EasingStyle.Circular,
-                ["SmoothingDirection"] = Enum.EasingDirection.InOut --In, Out, InOut
+                ["SmoothingDirection"] = Enum.EasingDirection.InOut -- In, Out, InOut
             }
         },
         ["Prediction"] = {
@@ -67,9 +71,9 @@ getgenv.Genesis = {
         },
         ["Visuals"] = {
             ["Visible"] = true,
-            ["Mode"] = "Outline",
+            ["Mode"] = "Outline", -- Default, Outline, Dot
             ["Radius"] = 150,
-            ["FovFilled"] = 1,
+            ["FovFilled"] = false,
             ["FovTransparency"] = 1,
             ["FovThickness"] = 1,
             ["FovColor"] = Color3.fromRGB(255,255,255)
@@ -104,13 +108,13 @@ getgenv.Genesis = {
             },
             ["360"] = {
                 ["Spin-Enabled"] = false,
-                ["Spin-Hotkey"] = "v",
+                ["Spin-Hotkey"] = Enum.KeyCode.V,
                 ["Spin-Velocity"] = 2600,
             },
             ["Sort-Inventory"] = {
                 ["Enabled"] = true,
-                ["Hotkey"] = "b",
-                ["Sort"] = {"[Double-Barrel SG]","[Revolver]","[TacticalShotgun]","[Knife]",}
+                ["Hotkey"] = Enum.KeyCode.B,
+                ["Sort"] = {"[Double-Barrel SG]","[Revolver]","[TacticalShotgun]","[Knife]",} -- anything in game
             },
             ["Spoofer"] = {
                 ["Spoof-Ping"] = {
@@ -129,7 +133,7 @@ getgenv.Genesis = {
         ["Exploits"] = {
             ["Cframe"] = {
                 ["Speed"] = true,
-                ["Speed-Hotkey"] = "z",
+                ["Speed-Hotkey"] = Enum.KeyCode.Z,
                 ["Speed-Velocity"] = 2,
             }
         }
